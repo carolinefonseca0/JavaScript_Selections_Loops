@@ -93,7 +93,7 @@ let value = Math.round((Math.random() * 500)); // creates a random number betwee
 let n = Math.round(Math.random() * (500 - 100) + 100); // creates a random number between 100 and 500
 ```
 for (let i = 1; i < n; i++) {
-    if (i = value) {
+    if (i == value) {
        console.log ("Found value!");
        break;
     } else {
@@ -104,22 +104,21 @@ for (let i = 1; i < n; i++) {
 // Exercise 5 Section
 console.log("EXERCISE 5:\n==========\n")
 
-```js
 let fizzDivisor = Math.round(Math.random() * (1 - 10) + 1);
 let buzzDivisor = Math.round(Math.random() * (1 - 10) + 1);
 let n = Math.round(Math.random() * (1 - 1000) + 1);
 let start = Math.round(Math.random() * (1 - 10) + 1);
-```
+
 for (let i = start; i <= n; i++) {
     console.log(i);
 
     if (i % 3 == 0 && i % 5 == 0) {
         console.log("FIZZBUZZ");
     } else {
-        if (i % 3 == 0) {
+        if (i % fizzDivisor == 0) {
             console.log("FIZZ");
         }
-        if (i % 5 == 0) {
+        if (i % buzzDivisor == 0) {
             console.log("BUZZ");
         }
     }
